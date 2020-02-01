@@ -1,0 +1,56 @@
+
+div.polaroid {
+  width: 60%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {width: 100%;
+     /* margin-left: auto; */
+     margin-right: auto;
+     /* text-align: center; */
+   }
+
+div.container {
+  /* text-align: center; */
+  padding: 10px 20px;
+  padding-bottom: 10px;
+}
+
+div.dogname{
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+div.petinfo{
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-family: arial;
+  /* position: absolute; */
+  /* float: left; */
+}
+
+h1.petindex{
+  padding: 10px;
+  padding-left: 25px;
+  background-color: gray;
+  color: lightgray;
+  border-radius: 10px;
+  border-bottom: 20px;
+  /* font-style: oblique; */
+  font-family: optima;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 0 2px black, 0 2px #777;
+}
+
+img.welcome_img{
+  width: 50%;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
