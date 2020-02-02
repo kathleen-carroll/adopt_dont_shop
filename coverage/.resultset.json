@@ -193,10 +193,58 @@
         null,
         1,
         1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_see_all_pets_in_one_shelter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_see_all_pets_spec.rb": [
@@ -416,6 +464,51 @@
         1,
         null
       ],
+      "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/controllers/pets_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/models/pet.rb": [
         1,
         1,
@@ -425,24 +518,6 @@
         null,
         null,
         null,
-        null
-      ],
-      "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/controllers/pets_controller.rb": [
-        1,
-        1,
-        2,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
-        1,
-        1,
         null
       ],
       "/Users/kathleencarroll/turing/2module/projects/adopt_dont_shop/app/controllers/shelters_controller.rb": [
@@ -495,6 +570,6 @@
         null
       ]
     },
-    "timestamp": 1580498507
+    "timestamp": 1580669925
   }
 }

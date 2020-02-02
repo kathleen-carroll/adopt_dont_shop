@@ -1,0 +1,12 @@
+<form action="/shelters/<%@shelter_id%>/pets" method="post">
+  require "pry"; binding.pry
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h3>New Pet Information</h3>
+  <p>Pet name: <input type='text' name='pet[name]'/><br/></p>
+  <p>Age: <input type='text' name='pet[approximate_age]'/><br/></p>
+  <p>Image Link (URL): <input type='text' name='pet[image_src]'/><br/></p>
+  <p>Sex (M or F): <input type='text' name='pet[sex]'/><br/></p>
+  <p>Adoption Status (Ex: Adoptable): <input type='text' name='pet[status]'/><br/></p>
+  <p>Description: <input type='text' name='pet[description]'/><br/></p>
+  <input type='submit'/>
+</form>

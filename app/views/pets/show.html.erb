@@ -1,0 +1,25 @@
+<a href="/pets">All Pets</a>
+
+<h1><%= @pet.name %></h1>
+
+<div class = polaroid>
+<div class = container><img src="<%= @pet.image_src%>" alt="dog pic" %></div>
+<div class = dogname><h4><%= @pet.name %></h4></div>
+<div class = petinfo>
+<p>Age: <%=@pet.approximate_age%></p>
+<p>Sex: <%=@pet.sex%></p>
+<p>Description: <%=@pet.description%></p>
+<p>Adoption Status: <%=@pet.status%></p>
+</div>
+</div>
+
+<a href="/pet/<%= @pet.id %>/edit">Edit</a>
+
+<p><form action="/pets/<%=@pet.id%>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete"/>
+</form></p>
+
+
+<a href="/shelters/<%= @pet.shelter.id %>">Shelter Information</a>
