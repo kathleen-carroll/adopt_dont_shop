@@ -5,7 +5,7 @@
 <% @pets.each do |pet| %>
   <div class = polaroid>
   <div class = container><img src="<%= pet.image_src%>" alt="dog pic" %></div>
-  <div class = dogname><h2><%= pet.name %></h2></div>
+  <div class = dogname><h2><a href="./pets/<%=pet.id%>"><%= pet.name %></a></h2></div>
   <div class = petinfo>
   <p>Shelter: <%= pet.shelter.name%></p>
   <p>Age: <%=pet.approximate_age%></p>
