@@ -13,9 +13,7 @@ RSpec.describe "shelter id page", type: :feature do
                             city: "New Orleans",
                             state: "LA",
                             zip: 70118)
-#shelter.ids
-# require "pry"; binding.pry
-    # visit '/shelters/'
+
     visit "/shelters/#{shelter1.id}"
 
     expect(page).to have_content(shelter1.name)
