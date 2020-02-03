@@ -1,26 +1,19 @@
+<h1> Pets for Adoption at <%= @shelter.name %></h1>
 
-
-<h1 Pets for Adoption at </h1>
-<% @shelter %>
-
-<%@pets.each do |pet| %>
-<% if pet.shelter.id.to_i == params[:id].to_i %>
-    <% @shelter_id = pet.shelter.id.to_i %>
-  <div class = polaroid_small>
+<center>
+<%@shelter.pets.each do |pet| %>
+  <center><div class = polaroid_small>
   <div class = container_small><img class = small src="<%= pet.image_src%>" alt="dog pic" %></div>
-  <div class = dogname_small><h4><%= pet.name %></h4></div>
+  <div class = dogname_small><h4><a href="/pets/<%=pet.id%>"><%= pet.name %></a></h4></div>
   <div class = petinfo_small>
   <p>Age: <%=pet.approximate_age%></p>
   <p>Sex: <%=pet.sex%></p>
   <p>Description: <%=pet.description%></p>
   <p>Adoption Status: <%=pet.status%></p>
+  <p>Shelter: <a href="/shelters/<%=pet.shelter.id%>"><%=pet.shelter.name%></a></p>
   </div>
-  </div>
-<% else %>
-  <!-- <h2> No Pets Available</h2> -->
-<% end %>
-<% end %>
+  </div></center>
+<% end %></center>
 
-<form class=newpet action='/shelters/<%=@shelter_id%>/pets/new'>
-  <input type="submit" value="Create New Pet" />
-</form>
+<%=
+link_to "Create New Pet", "/shelters/#{@shelter.id}/pets/new", method: :get %>
