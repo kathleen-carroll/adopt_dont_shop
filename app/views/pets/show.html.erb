@@ -10,16 +10,19 @@
 <p>Sex: <%=@pet.sex%></p>
 <p>Description: <%=@pet.description%></p>
 <p>Adoption Status: <%=@pet.status%></p>
+<p>Shelter: <a href="/shelters/<%=@pet.shelter.id%>"><%=@pet.shelter.name%></a></p>
 </div>
 </div>
 
-<a href="/pet/<%= @pet.id %>/edit">Edit</a>
+<center>
+  <%=link_to "Edit", "/pets/#{@pet.id}/edit", method: :get %>
 
-<p><form action="/pets/<%=@pet.id%>" method="POST">
+<form action="/pets/<%=@pet.id%>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="delete"/>
-</form></p>
+</form>
 
 
 <a href="/shelters/<%= @pet.shelter.id %>">Shelter Information</a>
+</center>

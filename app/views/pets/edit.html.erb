@@ -1,0 +1,11 @@
+<form action= "/pets/<%=@pet.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <textarea name='pet[name]'><%= @pet.name %></textarea><br/>
+  <textarea name='pet[approximate_age]'><%= @pet.approximate_age %></textarea><br/>
+  <textarea name='pet[image_src]'><%= @pet.image_src %></textarea><br/>
+  <textarea name='pet[status]'><%= @pet.status %></textarea><br/>
+  <textarea name='pet[description]'><%= @pet.description %></textarea><br/>
+  <input type='submit'/>
+</form>

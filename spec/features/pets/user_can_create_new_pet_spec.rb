@@ -17,9 +17,16 @@ RSpec.describe "shelter pet index to new pet form page", type: :feature do
     visit "/shelters/#{shelter1.id}/pets"
 
     # click_link
-    # require "pry"; binding.pry
+    # # require "pry"; binding.pry
     click_on 'Create New Pet'
     expect(current_path).to eq("/shelters/#{shelter1.id}/pets/new")
+
+    fill_in :name, with: "Boots"
+    fill_in :image_src, with: "https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/08/old-english-sheepdog-detail.jpg?bust=1535566218&width=630"
+    fill_in :approximate_age, with: "1"
+    fill_in :status, with: "Adoptable"
+    fill_in :sex, with: "M"
+    fill_in :description, with: "Boots is friendly and energetic"
 
     # expect(page).to have_content("Shelter name:")
     # expect(page).to have_content("Address:")
@@ -31,5 +38,11 @@ RSpec.describe "shelter pet index to new pet form page", type: :feature do
     # expect(page).to have_content('Submit')
     # expect(page).to have_button('#submit')
     click_button
+
+    new_pet = Pet.last
+
+    expect(new_pet.name).to eq("Boots")
+    
+    # expect(new_pet.name).to_not eq("")
   end
 end

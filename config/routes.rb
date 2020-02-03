@@ -13,6 +13,9 @@ delete '/shelters/:id', to: 'shelters#destroy'
 get '/pets', to: 'pets#index'
 get '/shelters/:shelter_id/pets', to: 'pets#pets'
 get '/pets/:id', to: 'pets#show'
-get '/shelters/:shelter_id/pets/new', to: 'pets#new'
-post '/shelters/pets', to: 'pets#create' #this needs to be :id or :shelter_id
+get '/shelters/:id/pets/new', to: 'pets#new'
+post '/shelters/:id/pets', to: 'pets#create' #this needs to be :id or :shelter_id
+get '/pets/:id/edit', to: 'pets#edit'
+patch '/pets/:id', to: 'pets#update'
+delete '/pets/:id', to: 'pets#destroy'
 end
