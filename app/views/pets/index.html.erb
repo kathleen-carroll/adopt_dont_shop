@@ -13,7 +13,7 @@
   <p>Status: <%=pet.status%></p>
   <p>Description: <%=pet.description%></p>
   </div>
-  <%=link_to "Edit", "/pets/#{pet.id}/edit", method: :get %>
+  <%=link_to '<button type="button">Edit</button>'.html_safe, "/pets/#{pet.id}/edit", method: :get %>
 
   <form action="/pets/<%=pet.id%>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
