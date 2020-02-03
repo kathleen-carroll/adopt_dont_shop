@@ -54,3 +54,17 @@ img.welcome_img{
   margin-right: auto;
   margin-left: auto;
 }
+
+div.index_small{
+  padding-left: 40px;
+}
+
+div.index{
+  width: 60%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px, 20px, 10px, 10px;
+  float: center;
+}

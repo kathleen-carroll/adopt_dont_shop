@@ -4,16 +4,20 @@
   <input type="submit" value="Create New Shelter" />
 </form>
 
+
 <% @shelters.each do |shelter| %>
+<div class=index>
   <ul><li><h3><a href="/shelters/<%=shelter.id%>"><%= shelter.name %></a></h3>
   </li>
   </ul>
+<div class=index_small>
+  <%=link_to '<button type="button">Edit</button>'.html_safe, "/shelters/#{shelter.id}/edit", method: :get %>
 
-  <a href="/shelters/<%= shelter.id %>/edit">Edit</a>
-
-  <p><form action="/shelters/<%= shelter.id %>" method="POST">
+  <form action="/shelters/<%= shelter.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="delete"/>
-  </form></p>
+  </form>
+  </div>
+  </div>
 <%end%>
