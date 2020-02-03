@@ -16,8 +16,6 @@ RSpec.describe "shelter pet index to new pet form page", type: :feature do
 
     visit "/shelters/#{shelter1.id}/pets"
 
-    # click_link
-    # # require "pry"; binding.pry
     click_on 'Create New Pet'
     expect(current_path).to eq("/shelters/#{shelter1.id}/pets/new")
 
@@ -28,21 +26,12 @@ RSpec.describe "shelter pet index to new pet form page", type: :feature do
     fill_in :sex, with: "M"
     fill_in :description, with: "Boots is friendly and energetic"
 
-    # expect(page).to have_content("Shelter name:")
-    # expect(page).to have_content("Address:")
-    # expect(page).to have_content("State:")
-    # expect(page).to have_content("City:")
-    # expect(page).to have_content("Zip:")
-
     expect(page).to have_css('input', :count => 7)
-    # expect(page).to have_content('Submit')
-    # expect(page).to have_button('#submit')
+
     click_button
 
     new_pet = Pet.last
 
     expect(new_pet.name).to eq("Boots")
-    
-    # expect(new_pet.name).to_not eq("")
   end
 end

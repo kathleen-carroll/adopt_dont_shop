@@ -5,12 +5,7 @@ class PetsController < ApplicationController
 
   def pets
     @shelter = Shelter.find(params[:shelter_id])
-    # @pets = Pet.all
-    # @shelter_id = params[:shelter_id]
   end
-  # def find_shelter
-  #   require "pry"; binding.pry
-  # end
 
   def new
     @shelter = Shelter.find(params[:id])
@@ -22,10 +17,7 @@ class PetsController < ApplicationController
 
   def create
     shelter = Shelter.find(params[:id])
-    # require "pry"; binding.pry
-    # pet = Pet.new(pet_params)
     shelter.pets.create(pet_params)
-    # pet.save
 
     redirect_to "/shelters/#{shelter.id}/pets"
   end

@@ -36,8 +36,6 @@ RSpec.describe "shelter show page and pet page", type: :feature do
     visit '/pets'
 
     expect(page).to have_content(pet1.name)
-    # expect(page).to have_content("#{shelter1.address} #{shelter1.state}, #{shelter1.zip}")
     expect(page).to have_content(pet2.name)
-    # expect(page).to have_content("#{shelter2.address} #{shelter2.state}, #{shelter2.zip}")
   end
 end

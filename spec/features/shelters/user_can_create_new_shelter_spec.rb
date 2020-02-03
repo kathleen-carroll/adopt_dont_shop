@@ -16,7 +16,6 @@ RSpec.describe "index to new shelter form page", type: :feature do
 
     visit '/shelters'
 
-    # click_link
     click_on 'Create New Shelter'
     expect(current_path).to eq('/shelters/new')
     expect(page).to have_content("Shelter name:")
@@ -26,7 +25,5 @@ RSpec.describe "index to new shelter form page", type: :feature do
     expect(page).to have_content("Zip:")
 
     expect(page).to have_css('input', :count => 6)
-    # expect(page).to have_content('Submit')
-    # expect(page).to have_button('#submit')
   end
 end
